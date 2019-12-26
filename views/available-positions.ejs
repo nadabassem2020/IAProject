@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OT - Available exams</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="hr exams-part">
+    <div class="page-content">
+      <div class="page-navbar">
+        <div class="welcome">
+          <p>Welcome <span><%= username %></span></p>
+        </div>
+        <div class="logout">
+          <a href="/logout" class="btn btn-trans">Logout</a>
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="container">
+          <div class="exams">
+            <h3>Available Positions</h3>
+            <div class="insert-box">
+              <h5>Insert Position</h5>
+              <form action="/available-positions" method="post">
+                <div class="form-group">
+                  <input type="text" name="title" id="title" value="" class="form-control" placeholder="Position Title" required>
+                </div>
+                <div class="form-group">
+                  <textarea name="description" id="description" rows="4" class="form-control" placeholder="Position Description" required></textarea>
+                </div>
+                <div class="text-right">
+                  <input type="submit" name="" value="Insert" class="btn btn-success">
+                </div>
+              </form>
+            </div>
+            <div class="positions">
+              <% for ( var i = 0; i < positions.length; i++ ){ %>
+                <div class="position">
+                  <div class="head">
+                    <h5><%= positions[i].title %></h5>
+                    <div class="buttons">
+                      <form>
+                        <button type="submit" name="button" class="btn btn-danger"  formaction="/available-positions/delete/<%=positions[i]._id%>"><img src="icons/trash.svg" alt=""></button>
+                      </form>
+                    </div>
+                  </div> 
+                  <div class="position-desc">
+                    <p><%=positions[i].description%></p>
+                  </div>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery.3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

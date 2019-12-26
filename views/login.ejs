@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OT - Login</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="access">
+    <div class="page-content">
+      <div class="container">
+        <div class="box">
+          <h2 class="text-center">Login to access your account</h2>
+          <div class="form">
+            <form action="/login" method="post">
+              <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="password" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12 text-center">
+                  <input type="submit" class="btn btn-primary" value="Sign in">
+                </div>
+              </div>
+              <div class="tail text-center">
+                  <p>Don't have account? <a href="/register">Register</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery.3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

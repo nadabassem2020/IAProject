@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OT - Applicants Requests</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="hr exams-part">
+    <div class="page-content">
+      <div class="page-navbar">
+        <div class="welcome">
+          <p>Welcome <span><%= username %></span></p>
+        </div>
+        <div class="logout">
+          <a href="/logout" class="btn btn-trans">Logout</a>
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="container">
+          <div class="approve_req">
+            <h3>Approve Request for position:</h3>
+            <h4 class="text-center title"><%=request.position_title%></h4>
+            <form action="/approve_request" method="post">
+              <div class="form-group">
+                <input type="text" name="applicant_id" value="<%=request.applicant_id%>" hidden>
+                <input type="text" name="position_id" value="<%=request.position_id%>" hidden>
+                <input type="text" name="position_title" value="<%=request.position_title%>" hidden>
+                <input type="text" name="id" value="<%=request._id%>" hidden>
+                <label for="type">Choose types to include</label>
+                  <% for ( var i = 0; i < types.length; i++ ){ %>
+                    <br> 
+                    <input type="checkbox" name="types[]" value="<%= types[i].name %>"> <%= types[i].name %>
+                  <% } %>
+              </div>
+              <div class="form-group">
+                <label for="">Chooice deadline</label>
+                <br>
+                <label for="">Time</label>
+                <input type="time" name="time" value=""  style="margin-right:40px">
+                <label for="">Date</label>
+                <input type="date" name="date" value="" >
+              </div>
+              <div class="form-group">
+                <label for="">Exam Time</label>
+                <input type="number" name="exam_time" value="">
+                <label for=""> In Minutes</label>
+              </div>
+              <div class="text-right">
+                <input type="submit" value="Create Exam" class="btn btn-success">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery.3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,341 @@
+/* ---------------------------- Start Global ----------------------------*/
+body {
+  font-family: sans-serif; }
+
+h1 {
+  margin-top: 140px; }
+
+.btn {
+  padding: 5px 25px;
+  width: auto;
+  display: inline-block;
+  color: #fff;
+  margin: 0 20px; }
+  .btn:hover {
+    color: #fff; }
+
+.btn-trans {
+  border: 1px solid #fff; }
+
+.btn-yellow {
+  background-color: #e0a900; }
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none; }
+
+.e-msg {
+  margin-top: 10px;
+  display: inline-block;
+  color: #e22525;
+  font-size: 11px;
+  display: none; }
+
+.have-error .e-msg {
+  display: block; }
+.have-error input {
+  box-shadow: 0 0 3px 2px #e22525; }
+
+/* ---------------------------- End Global ----------------------------*/
+/* ---------------------------- Start navbar -------------------------------*/
+.page-navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between; }
+  .page-navbar p {
+    padding-top: 4px;
+    margin-bottom: 0;
+    text-transform: capitalize; }
+  .page-navbar .btn {
+    font-size: 14px; }
+    .page-navbar .btn:hover {
+      background-color: #e0a900;
+      border-color: #e0a900; }
+
+/* ---------------------------- End navbar -------------------------------*/
+/* ---------------------------- Start pages -------------------------------*/
+.home {
+  background-color: #333;
+  color: #fff; }
+  .home .buttons {
+    margin-top: 140px; }
+  .home .text {
+    margin-top: 50px; }
+
+/* ---------------------------- End pages -------------------------------*/
+/* ---------------------------- Start pages -------------------------------*/
+.access {
+  background-color: #e1e1e1; }
+  .access .box {
+    width: 360px;
+    padding: 20px 30px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #fafafa;
+    color: #2a2a2a; }
+    .access .box h2 {
+      margin: 20px 0 50px;
+      font-size: 20px; }
+    .access .box .btn {
+      margin: 0;
+      background-color: #e0a900;
+      border: 0; }
+    .access .box label {
+      font-size: 14px; }
+    .access .box .row {
+      justify-content: space-between; }
+    .access .box .btn {
+      margin-top: 20px; }
+    .access .box .tail {
+      margin-top: 30px;
+      font-size: 14px; }
+  .access.register .box {
+    width: 540px; }
+  .access.register label {
+    width: 120px !important; }
+
+/* ---------------------------- End pages -------------------------------*/
+/* ---------------------------- Start pages -------------------------------*/
+.feed .aviable-positions {
+  margin-top: 80px; }
+  .feed .aviable-positions h3 {
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    color: #333; }
+  .feed .aviable-positions .position {
+    border: 1px solid #5a5a5a;
+    margin-bottom: 30px; }
+    .feed .aviable-positions .position h6 {
+      padding: 10px 20px;
+      background-color: #5a5a5a;
+      color: #fff; }
+      .feed .aviable-positions .position h6:hover {
+        background-color: #333; }
+    .feed .aviable-positions .position .text {
+      padding: 20px; }
+.feed .applicant-position {
+  padding-top: 100px; }
+  .feed .applicant-position .position {
+    border: 1px solid #5a5a5a; }
+    .feed .applicant-position .position h3 {
+      background-color: #5a5a5a;
+      font-size: 22px;
+      color: #fff;
+      padding: 10px; }
+    .feed .applicant-position .position .desc {
+      padding: 20px; }
+  .feed .applicant-position .position-apply {
+    border: 1px solid #5a5a5a;
+    padding: 20px; }
+    .feed .applicant-position .position-apply form {
+      margin-top: 50px; }
+      .feed .applicant-position .position-apply form .form-group {
+        display: flex; }
+        .feed .applicant-position .position-apply form .form-group label {
+          margin-right: 20px; }
+
+/* ---------------------------- End pages -------------------------------*/
+/* ---------------------------- Start pages -------------------------------*/
+.hr.hr-panel .content-area {
+  width: 80%;
+  margin: auto; }
+.hr.hr-panel .search-bar {
+  margin: 100px 0 140px; }
+  .hr.hr-panel .search-bar .box {
+    display: flex; }
+    .hr.hr-panel .search-bar .box .form-group {
+      margin: 0;
+      flex: auto; }
+      .hr.hr-panel .search-bar .box .form-group input {
+        border-radius: 5px 0px 0 5px;
+        border-right: 0; }
+    .hr.hr-panel .search-bar .box .btn {
+      margin: 0;
+      display: block;
+      border-radius: 0px 5px 5px 0; }
+  .hr.hr-panel .search-bar .filters {
+    margin-top: 15px;
+    border-bottom: 1px solid #e1e1e1; }
+    .hr.hr-panel .search-bar .filters ul {
+      margin-bottom: 5px; }
+      .hr.hr-panel .search-bar .filters ul li {
+        display: inline-block;
+        font-size: 14px;
+        margin-right: 20px;
+        color: #999;
+        cursor: pointer; }
+        .hr.hr-panel .search-bar .filters ul li.active {
+          color: #5a5a5a; }
+.hr.hr-panel .actions {
+  width: 700px;
+  display: flex; }
+  .hr.hr-panel .actions h4 {
+    font-size: 26px;
+    margin-bottom: 20px; }
+  .hr.hr-panel .actions ul {
+    text-align: center;
+    padding-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .hr.hr-panel .actions ul li {
+      width: auto;
+      margin-bottom: 20px;
+      background-color: #36c2b5;
+      border-radius: 5px;
+      width: 240px; }
+      .hr.hr-panel .actions ul li a {
+        padding: 4px 30px;
+        display: inline-block;
+        color: #fff;
+        width: 100%; }
+.hr.exams-part {
+  padding-bottom: 80px; }
+  .hr.exams-part .content-area {
+    margin-top: 80px; }
+  .hr.exams-part .exam-type {
+    margin-bottom: 50px; }
+  .hr.exams-part .exams {
+    width: 800px; }
+    .hr.exams-part .exams .head {
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      background-color: #e1e1e1;
+      padding: 10px 20px; }
+      .hr.exams-part .exams .head .btn {
+        color: #fff;
+        padding: 2px 7px 5px 8px;
+        margin: 0 0 0 10px; }
+        .hr.exams-part .exams .head .btn img {
+          width: 18px; }
+    .hr.exams-part .exams h3 {
+      margin-bottom: 30px; }
+    .hr.exams-part .exams .exam {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 20px; }
+      .hr.exams-part .exams .exam a {
+        background-color: #e1e1e1;
+        padding: 10px 20px;
+        color: #2a2a2a;
+        display: inline-block;
+        width: 600px; }
+        .hr.exams-part .exams .exam a h6 {
+          margin-bottom: 0px; }
+          .hr.exams-part .exams .exam a h6 span {
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: bold; }
+        .hr.exams-part .exams .exam a:hover {
+          background-color: #999; }
+      .hr.exams-part .exams .exam .buttons {
+        display: flex;
+        margin-left: 20px; }
+        .hr.exams-part .exams .exam .buttons button {
+          font-size: 14px;
+          padding: 2px 10px;
+          display: inline-block;
+          margin: 0 10px 0 0; }
+  .hr.exams-part .insert-box {
+    margin-bottom: 60px; }
+    .hr.exams-part .insert-box form {
+      width: 600px; }
+      .hr.exams-part .insert-box form label {
+        font-size: 14px;
+        font-weight: bold; }
+      .hr.exams-part .insert-box form .btn {
+        margin: 0; }
+      .hr.exams-part .insert-box form .quest-insert .form-group {
+        margin-bottom: 10px; }
+      .hr.exams-part .insert-box form .answers {
+        padding: 20px 0 40px 100px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative; }
+        .hr.exams-part .insert-box form .answers input {
+          flex-basis: 48%;
+          margin-bottom: 10px; }
+      .hr.exams-part .insert-box form .add-new {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center; }
+        .hr.exams-part .insert-box form .add-new span {
+          display: inline-block;
+          padding: 0 20px;
+          font-size: 14px;
+          font-weight: bold;
+          height: 30px;
+          line-height: 30px;
+          background-color: #079ed6;
+          color: #fff;
+          border-radius: 7px;
+          text-align: center;
+          cursor: pointer; }
+        .hr.exams-part .insert-box form .add-new h6 {
+          margin-left: 20px;
+          font-size: 14px;
+          margin-bottom: 0; }
+  .hr.exams-part .quests {
+    width: 600px; }
+    .hr.exams-part .quests .quest {
+      margin-bottom: 40px; }
+      .hr.exams-part .quests .quest .head span {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 14px;
+        margin-left: 40px; }
+    .hr.exams-part .quests .quest-answers {
+      padding: 20px;
+      background-color: #e1e1e1; }
+      .hr.exams-part .quests .quest-answers ul {
+        list-style-type: decimal;
+        margin-bottom: 0; }
+        .hr.exams-part .quests .quest-answers ul li {
+          padding: 5px 0; }
+  .hr.exams-part .positions {
+    width: 600px; }
+    .hr.exams-part .positions .position {
+      border: 1px solid #ccc;
+      margin-bottom: 50px; }
+      .hr.exams-part .positions .position .head {
+        background-color: #ccc;
+        padding: 5px 10px;
+        align-items: center; }
+        .hr.exams-part .positions .position .head h5 {
+          margin-bottom: 0; }
+      .hr.exams-part .positions .position .position-desc {
+        padding: 0 20px; }
+  .hr.exams-part .applicants_requests {
+    width: 600px; }
+    .hr.exams-part .applicants_requests .request {
+      padding: 20px;
+      margin-top: 60px;
+      border: 1px solid #999; }
+      .hr.exams-part .applicants_requests .request .head {
+        margin-bottom: 20px; }
+      .hr.exams-part .applicants_requests .request .buttons {
+        margin-top: 40px; }
+        .hr.exams-part .applicants_requests .request .buttons .btn {
+          margin: 0 0 0 20px; }
+  .hr.exams-part .approve_req {
+    width: 600px; }
+    .hr.exams-part .approve_req .title {
+      margin: 40px 0 40px; }
+.hr .sidebar {
+  margin-top: 88px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center; }
+
+/* ---------------------------- End pages -------------------------------*/
+
+/*# sourceMappingURL=master.css.map */

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OT - Applicants Requests</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="hr exams-part">
+    <div class="page-content">
+      <div class="page-navbar">
+        <div class="welcome">
+          <p>Welcome <span><%= username %></span></p>
+        </div>
+        <div class="logout">
+          <a href="/logout" class="btn btn-trans">Logout</a>
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="container">
+          <div class="applicants_requests">
+            <h3>Applicants Requests</h3>
+            <% for ( var i = 0; i < requests.length; i++ ){ %>
+              <div class="request">
+                <div class="title">
+                  <div class="head">
+                    <h5>Postion: <span><%= requests[i].position_title %></span></h5>
+                  </div> 
+                  <div class="id">
+                    <p>Applicant ID: <%=requests[i].applicant_id%></p>
+                  </div>
+                  <div class="cv text-center">
+                    <a href="http://localhost:3000/uploads/<%=requests[i].applicant_id%>.pdf" target="_blank">View CV</a>
+                  </div>
+                  <div class="buttons text-right">
+                    <a href="/applicant-request?id=<%=requests[i]._id%>" class="btn btn-success">Approve</a>
+                    <a href="/disapprove_request?id=<%=requests[i]._id%>" class="btn btn-danger">Disapprove</a>
+                  </div>
+                </div>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery.3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

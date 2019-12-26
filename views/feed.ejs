@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OT - Feed</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="feed">
+    <div class="page-content">
+      <div class="page-navbar">
+        <div class="welcome">
+          <p>Welcome <span><%= username %></span></p>
+        </div>
+        <div class="logout">
+          <a href="/logout" class="btn btn-trans">Logout</a>
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="container">
+          <div class="aviable-positions">
+            <h3>available positions</h3>
+            <div class="row">
+              <% for(var i=0 ; i < positions.length ; i++) {%>
+                <div class="col-6">
+                  <div class="position">
+                    <a href="/applicant-position?id=<%=positions[i]._id%>"><h6><%= positions[i].title%></h6></a>
+                    <div class="text">
+                      <p><%= positions[i].description%></p>
+                    </div>
+                  </div>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery.3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

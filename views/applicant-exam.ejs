@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OT - Questions</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="hr exams-part">
+    <div class="page-content">
+      <div class="page-navbar">
+        <div class="welcome">
+          <p>Welcome <span><%= username %></span></p>
+        </div>
+        <div class="logout">
+          <a href="/logout" class="btn btn-trans">Logout</a>
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="container">
+          <div class="exams">
+            <h3>Solve this exam</h3>
+            <% var index = exam.types.indexOf(type); %>
+            <% for ( var i = 0; i < exam.questions[index].length; i++ ){ %>
+              <div class="quests">
+                <div class="quest">
+                  <div class="head">
+                    <h5><%= exam.questions[index][i].name %></h5>
+                  </div> 
+                  <div class="quest-answers" style="border: 1px solid #ccc; background-color: #fff">
+                    <form>
+                      <br>
+                      <input type="radio" name="<%=exam.questions[index][i]._id%>" value="1" > <%=exam.questions[index][i].answers[0]%>  
+                      <% for (var j=1; j < 4; j++) { %>
+                        <br>
+                        <input type="radio" name="<%=exam.questions[index][i]._id%>" value="0" > <%=exam.questions[index][i].answers[j]%>     
+                      <% } %>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery.3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

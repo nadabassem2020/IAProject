@@ -1,0 +1,35 @@
+{
+  "name": "online-testing",
+  "version": "1.0.0",
+  "description": "Node.js web application for online tests which can be used by HR to evaluate Candidates.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwx-amr/Online-Testing.git"
+  },
+  "keywords": [
+    "Node.js",
+    "MongoDb",
+    "Express.js",
+    "HTML5",
+    "CSS3"
+  ],
+  "author": "NS Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lwx-amr/Online-Testing/issues"
+  },
+  "homepage": "https://github.com/lwx-amr/Online-Testing#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.7.13",
+    "mongoose-simple-random": "^0.4.1",
+    "nodemailer": "^6.4.2"
+  }
+}

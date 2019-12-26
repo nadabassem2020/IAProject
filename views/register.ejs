@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OT - Register</title>
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    
+  </head>
+  <body class="access register">
+    <div class="page-content">
+      <div class="container">
+        <div class="box">
+          <h2 class="text-center">Register to join our website</h2>
+          <div class="form">
+            <form class="js-regForm" action="/register" method="post">
+              <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="name" id="name" required>
+                  <span class="e-msg">
+                    Please enter your name.
+                  </span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" name="email" id="email" required>
+                  <span class="e-msg">
+                    Email is invalid.
+                  </span>
+                </div>                
+              </div>
+              <div class="form-group row">
+                <label for="password" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" name="password" id="password" required>
+                  <span class="e-msg">
+                    Please enter your password.
+                  </span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control js-NotReq" name="phone" id="phone" >
+                </div>
+              </div>
+              <div class="text-center">
+                <input type="submit" class="btn btn-yellow" value="Register">
+              </div>
+              <div class="tail text-center">
+                <p>Already have account? <a href="/login">Login</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery.3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

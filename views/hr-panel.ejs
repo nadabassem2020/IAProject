@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OT - HR</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="hr hr-panel">
+    <div class="page-content">
+      <div class="page-navbar">
+        <div class="welcome">
+          <p>Welcome <span><%= username %></span></p>
+        </div>
+        <div class="logout">
+          <a href="/logout" class="btn btn-trans">Logout</a>
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="container">
+          <div class="search-bar">
+            <form action="/hr-search" method="post">
+              <input type="text" name="type" value="email" hidden readonly class="js-SendedFilter">
+              <div class="box">
+                <div class="form-group">
+                  <input type="text" name="value" value="" class="form-control">
+                </div>
+                <input type="submit" name="" value="search" class="btn btn-yellow">
+              </div>
+              <div class="filters js-Filters">
+                <ul class="list-unstyled">
+                  <li data-filter='email' class="active">Email</li>
+                  <li data-filter='name'>Name</li>
+                  <li data-filter='exam-type' >Exam type</li>
+                  <li data-filter='exam-date' >Exam date</li>
+                </ul>
+              </div>
+            </form>
+          </div>
+          <div class="actions">
+            <h4>Actions:</h4>
+            <ul class="list-unstyled">
+              <li><a href="/available-exams-types">Exams Types</a></li>
+              <li><a href="/all-questions">Questions & Answers</a></li>
+              <li><a href="/applicants-requests">Candidates Requests</a></li>
+              <li><a href="/applicants-tests">Candidates Solutions</a></li>
+              <li><a href="/available-positions">Available Positions</a></li>
+              <li><a href="/report">Summarized Report</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery.3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

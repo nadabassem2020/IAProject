@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OT - Questions</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="hr exams-part">
+    <div class="page-content">
+      <div class="page-navbar">
+        <div class="welcome">
+          <p>Welcome <span><%= username %></span></p>
+        </div>
+        <div class="logout">
+          <a href="/logout" class="btn btn-trans">Logout</a>
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="container">
+          <div class="exams">
+            <div class="insert-box">
+              <h5>Edit question</h5>
+              <form action="/question-edit" method="post">
+                <div class="form-group">
+                  <label for="type">Type</label>
+                  <select name="type" id="type" class="form-control" required>
+                    <% for ( var i = 0; i < types.length; i++ ){ %>
+                        <option value="<%= types[i].name %>"> <%= types[i].name %></option> 
+                    <% } %>
+                  </select>
+                </div>
+                <div class="quest-insert">
+                  <div class="form-group">
+                    <label>Question</label>
+                    <input type="text" name="id" value="<%=question._id%>" hidden required>
+                    <input type="text" name="name" value="<%=question.name%>" class="form-control" required>
+                    <div class="answers">
+                      <% for ( var i=0 ; i < question.answers.length ; i++) {%>
+                        <input type="text" name="answers[]" value="<%=question.answers[i]%>" class="form-control" required>
+                      <% } %>
+                      <div class="add-new">
+                        <span class="js-AddAns">+ Answer</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <input type="submit" value="Edit" class="btn btn-info">
+                </div>
+                <div class="text-left">
+                  <a href="/question-delete?id=<%=question._id%>" class="btn btn-danger" ><img src="icons/trash.svg" alt=""></a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery.3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
